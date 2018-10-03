@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Include.JS</title>
+    <script src="include.js"></script>
+    <script>
+        include("bootstrap.css");
+        include("vue.js");
+    </script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="event" class="btn">Hello World</button>
+    </div>
+
+    <script>
+        window.onload = function(){
+
+            new Vue({
+                el:"#app",
+                data:{
+
+                },
+                methods:{
+                    event:function(){
+                        alert("click!");
+                    }
+                }
+            })
+
+
+        }
+    </script>
+
+</body>
+</html>
